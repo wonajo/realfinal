@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for d in ds.all %}
+<h1>제목 : {{d.title}}</h1>
+<p>날짜 : {{d.pub_date}}</p>
+<p>본문 미리보기 : {{d.summary}}<a href = "{%url 'detail' d.id%}">...more</a></p>
+{% endfor %}
+
+{% endblock %}
